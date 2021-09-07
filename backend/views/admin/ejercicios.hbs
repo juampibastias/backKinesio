@@ -1,0 +1,55 @@
+<script src="https://kit.fontawesome.com/b85fe5262a.js" crossorigin="anonymous"></script>
+
+<div class="container" style="margin-top: 50px auto">
+
+
+    <div class="row">
+            <p class="text-end">Hola {{usuario}}! <a  class="btn btn-danger" href="/admin/login/logout">
+             Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></p>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-7">
+                    <h2>Listado de Ejercicios</h2>
+                </div>
+            <div class="col-5 text-end">
+                <a href="/admin/ejercicios/agregarejercicios" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i>Nuevos Ejercicios</a>
+                <a href="http://localhost:3000/admin/principal" class="btn btn-success"><i class="fas fa-long-arrow-alt-left"> </i>Volver</a>
+                    </div>
+                </div>
+
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" style="table-layout:fixed">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Ejercicio</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Repeticiones</th>
+                                    <th class="text-end">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                            {{#each ejercicios}}
+                                <tr>
+                                    <th scope="row">{{id}}</th>
+                                    <td>{{ejercicio}}</td>
+                                    <td>{{imagen}}</td>
+                                    <td>{{{descripcion}}}</td>
+                                    <td>{{{repeticion}}}</td>
+                                    <td class="text-end">
+                                        <a class="btn btn-secondary" href="/admin/ejercicios/modificarejercicios/{{id}}"><i class="fas fa-pencil-alt"></i></a>
+                                        <a class="btn btn-secondary" href="/admin/ejercicios/eliminarejercicios/{{id}}"><i class="fa fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>

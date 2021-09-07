@@ -1,0 +1,29 @@
+<div class="container" style="margin: 100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Agregar ejercicio</h4>
+            <form action="/admin/ejercicios/agregarejercicios" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Ejercicio" name="ejercicio">
+            </div>
+            <div class="form-group">
+            <label>Imagen:<input type="file" name="imagen" id="imagen" /></label>
+            </div>
+            <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Descripcion" name="descripcion"></textarea>
+            </div>
+            <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Repeticiones" name="repeticion"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <br>
+            <br>
+            <a href="http://localhost:3000/admin/ejercicios" class="btn btn-success"><i class="fas fa-long-arrow-alt-left"> </i>Volver</a>
+            </form>
+            {{#if error}}
+            {{message}} 
+            {{/if}}
+        </div>
+    </div>
+</div>
+
