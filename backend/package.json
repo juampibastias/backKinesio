@@ -17,6 +17,7 @@
     "express-fileupload": "^1.2.1",
     "express-session": "^1.17.2",
     "hbs": "^4.1.2",
+    "heroku": "^7.59.0",
     "http-errors": "~1.6.3",
     "md5": "^2.3.0",
     "morgan": "~1.9.1",
